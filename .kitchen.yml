@@ -1,9 +1,6 @@
 ---
 driver_plugin: vagrant
 
-provisioner:
-  name: chef_zero
-
 platforms:
 - name: windows2012r2_cloud
   driver_config:

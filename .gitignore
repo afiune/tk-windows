@@ -1,0 +1,12 @@
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+.kitchen/
+Berksfile.lock
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
