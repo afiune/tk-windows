@@ -1,0 +1,26 @@
+---
+driver:
+  name: ec2
+  aws_access_key_id: YOUR_KEY_ID
+  aws_secret_access_key: YOUR_ACCESS_KEY
+  security_group_ids: ["sg-70c2bf15"]
+  region: us-east-1
+  flavor_id: m1.large
+  availability_zone: us-east-1b
+  require_chef_omnibus: true
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: windows-2008R2
+    driver:
+      guest: :windows
+  - name: windows-2012R2
+    driver:
+      guest: :windows
+suites:
+- name: default
+  run_list:
+    - 'recipe[tk-windows::default]'
+  attributes:
