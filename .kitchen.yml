@@ -4,12 +4,22 @@ driver_plugin: vagrant
 provisioner:
   name: chef_zero
 
+transport:
+  name: winrm
+
 platforms:
+- name: centos-6.5
+  transport:
+    name: ssh
+- name: windows7
+  driver_config:
+    box: windows7
+  transport:
+    name: winrm
 - name: windows2012r2_cloud
   driver_config:
     box: windows2012r2_cloud
     box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.12/win2012r2-datacenter-chef11.12.8.box
-    guest: :windows
 
 suites:
 - name: default
