@@ -11,11 +11,18 @@ platforms:
 - name: centos-6.5
   transport:
     name: ssh
-- name: windows7
+- name: windows-7
   driver_config:
-    box: windows7
-  transport:
-    name: winrm
+    box: windows-7
+    box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win7x64-enterprise-nocm.box
+- name: windows-8.1
+  driver_config:
+    box: windows-8.1
+    box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win81x64-enterprise-nocm.box
+- name: windows-2008R2
+  driver_config:
+    box: windows-2008R2
+    box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win2008r2-datacenter-nocm.box
 - name: windows2012r2_cloud
   driver_config:
     box: windows2012r2_cloud
