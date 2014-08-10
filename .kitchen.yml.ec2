@@ -5,7 +5,7 @@ driver:
   aws_secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
   security_group_ids: ["sg-70c2bf15"]
   region: us-east-1
-  flavor_id: m1.large
+  flavor_id: m1.small
   availability_zone: us-east-1b
   require_chef_omnibus: true
 
