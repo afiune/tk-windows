@@ -29,7 +29,18 @@ platforms:
     box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win2012-datacenter-nocm.box
 
 suites:
-- name: default
+- name: win
   run_list:
     - 'recipe[tk-windows::default]'
   attributes:
+  excludes:
+      - centos-6.5
+- name: nix
+  run_list:
+    - 'recipe[tk-windows::default]'
+  attributes:
+  excludes:
+      - windows-7
+      - windows-8.1
+      - windows-2008R2
+      - windows-2012DC

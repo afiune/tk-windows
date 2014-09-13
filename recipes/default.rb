@@ -6,12 +6,19 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe "iis"
 
 directory "/sandwich" do
 	action :create
 end
 
-template "#{node['iis']['docroot']}/index.html" do
-	source "index.html.erb"
+if node["platform"].eql?('windows') 
+  include_recipe "iis"
+  template "#{node['iis']['docroot']}/index.html" do
+  	source "index.html.erb"
+  end
+else
+  include_recipe "apache2"
+  template "#{node[:apache][:dir]}/index.html" do
+    source "index.html.erb"
+  end
 end
