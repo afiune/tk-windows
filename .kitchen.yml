@@ -43,4 +43,4 @@ suites:
       - windows-7
       - windows-8.1
       - windows-2008R2
-      - windows-2012DC
+      - windows-2012R2
