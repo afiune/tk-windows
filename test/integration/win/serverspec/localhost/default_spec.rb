@@ -6,7 +6,7 @@ end
 
 describe file('/inetpub/wwwroot/index.html') do
   it { should be_file }
-  it { should contain "Hello world" }
+  its(:content) { should match /Hello world/ }
 end
 
 describe service('W3SVC') do
