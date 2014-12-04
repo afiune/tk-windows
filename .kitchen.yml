@@ -25,8 +25,8 @@ platforms:
     box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win2008r2-datacenter-nocm.box
 - name: windows-2012R2
   driver_config:
-    box: windows-2012R2
-    box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win2012-datacenter-nocm.box
+    box: win2012r2-datacenter-nocm
+    box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win2012r2-datacenter-nocm.box
 
 suites:
 - name: win
