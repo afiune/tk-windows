@@ -14,19 +14,19 @@ platforms:
 - name: windows-7
   driver_config:
     box: windows-7
-    box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win7x64-enterprise-nocm.box
+    box_url: http://cdn.box-cutter.com/windows/virtualbox4.3.20/i7/eval-win7x64-enterprise-nocm-1.0.3.box
 - name: windows-8.1
   driver_config:
     box: windows-8.1
-    box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win81x64-enterprise-nocm.box
+    box_url: http://cdn.box-cutter.com/windows/virtualbox4.3.20/eval-win81x64-enterprise-nocm-1.0.2.box 
 - name: windows-2008R2
   driver_config:
     box: windows-2008R2
-    box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win2008r2-datacenter-nocm.box
+    box_url: http://cdn.box-cutter.com/windows/virtualbox4.3.20/eval-win2008r2-datacenter-nocm-1.0.2.box 
 - name: windows-2012R2
   driver_config:
-    box: win2012r2-datacenter-nocm
-    box_url: https://s3.amazonaws.com/box-cutter-us-east-1-cloudtrail/windows/virtualbox4.3.14/win2012r2-datacenter-nocm.box
+    box: windows-2012R2
+    box_url: http://cdn.box-cutter.com/windows/virtualbox4.3.20/eval-win2012r2-datacenter-nocm-1.0.2.box
 
 suites:
 - name: win
