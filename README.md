@@ -12,6 +12,38 @@ Requirements
 - `kitchen-vagrant v0.16.0` - tk-windows needs VagrantWindows implementation. [https://github.com/afiune/kitchen-vagrant.git]
 - `kitchen-ec2 v0.9.0` - tk-windows needs Ec2Windows implementation. [https://github.com/afiune/kitchen-ec2.git]
 
+Test-kitchen Testing Directory Structure
+------------
+`````
+[COOKBOOK]
+ |
+ +-- test
+     |
+     +-- integration
+         |
+         +-- [SUIT_NAME]
+              |
+              +-- [BUSSER_PLUGIN]
+`````
+tk-windows Test Directory Structure
+------------
+`````
+ COOKBOOK
+ |
+ +-- recipes
+ +-- ...
+ +-- test
+     |
+     +-- integration
+         |
+         +-- nix
+             |
+             +-- bats 
+         +-- win 
+             |
+             +-- serverspec 
+             +-- pester 
+`````
 Testing Vagrant driver: kitchen-vagrant
 ------------
 The vagrant driver is the default test. There is no need to modify anything. Just Run & Enjoy It! 
