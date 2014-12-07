@@ -1,5 +1,9 @@
 ---
-driver_plugin: vagrant
+driver: 
+  name: vagrant
+  customize:
+    memory: 2048
+    cpus: 4
 
 provisioner:
   name: chef_zero
@@ -8,6 +12,9 @@ transport:
   name: winrm
 
 platforms:
+- name: ubuntu-12.04
+  transport:
+    name: ssh
 - name: centos-6.5
   transport:
     name: ssh
@@ -20,6 +27,8 @@ platforms:
     box: windows-8.1
     box_url: http://cdn.box-cutter.com/windows/virtualbox4.3.20/eval-win81x64-enterprise-nocm-1.0.2.box 
 - name: windows-2008R2
+  transport:
+    max_threads: 20
   driver_config:
     box: windows-2008R2
     box_url: http://cdn.box-cutter.com/windows/virtualbox4.3.20/eval-win2008r2-datacenter-nocm-1.0.2.box 
@@ -34,13 +43,14 @@ suites:
     - 'recipe[tk-windows::default]'
   attributes:
   excludes:
-      - centos-6.5
+    - centos-6.5
+    - ubuntu-12.04
 - name: nix
   run_list:
     - 'recipe[tk-windows::default]'
   attributes:
   excludes:
-      - windows-7
-      - windows-8.1
-      - windows-2008R2
-      - windows-2012R2
+    - windows-7
+    - windows-8.1
+    - windows-2008R2
+    - windows-2012R2
