@@ -1,0 +1,1 @@
+default['iis']['docroot'] = '/inetpub/wwwroot'
